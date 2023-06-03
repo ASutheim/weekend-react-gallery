@@ -1,10 +1,14 @@
-import { useState } from "react";
+import GalleryItem from "../GalleryItem/GalleryItem";
 
-function GalleryList() {
+function GalleryList({ galleryArray }) {
   console.log("Inside GalleryList component function");
   return (
-    <p>boop</p>
-  )
+    <div>
+      {galleryArray.map((item) => (
+        <GalleryItem item={item} />
+      ))}
+    </div>
+  );
 }
 
 export default GalleryList;

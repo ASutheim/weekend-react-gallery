@@ -4,15 +4,16 @@ import axios from "axios";
 import GalleryList from "../GalleryList/GalleryList";
 
 function App() {
-  const [galleryList, setGalleryList] = useState([]);
+  const [galleryArray, setGalleryArray] = useState([]);
 
   //Requests the gallery list data from the server
-  const getGalleryList = () => {
+  const getGalleryArray = () => {
     console.log("Inside client side of get request");
     axios
       .get("/gallery")
+      //saves response data to the gallery array variable
       .then((response) => {
-        setGalleryList(response.data);
+        setGalleryArray(response.data);
       })
       .catch((error) => {
         console.log("Error in client side of get request", error);
@@ -21,20 +22,19 @@ function App() {
   };
 
   //Creates an instance of the get request which runs once on the page load
-  useEffect[
-    (() => {
-      getGalleryList();
-    },
-    [])
-  ];
+  useEffect(() => {
+    getGalleryArray();
+  }, []);
 
-  //Returns the data array to the DOM
+
+  //Appends all the things to the DOM 
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList />
+      {/* Passes the array of data from the get request to the GalleryList component via props*/}
+      <GalleryList galleryArray={galleryArray} />
     </div>
   );
 }
