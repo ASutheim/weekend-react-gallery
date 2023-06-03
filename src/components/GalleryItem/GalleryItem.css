@@ -1,0 +1,16 @@
+.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.description {
+  padding: 15px;
+  text-align: center;
+}
