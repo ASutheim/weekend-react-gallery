@@ -44,7 +44,24 @@ const galleryItems = [
       "A small kid I love drew this picture of me in chalk. I think it is a very accurate portrait.",
     likes: 0,
   },
-  // { id: 8, path: 'images/', description: ''},
+
+  {
+    id: 8,
+    path: "images/nye.jpg",
+    description: "I love hosting parties, especially New Years Eve.",
+  },
+
+  {
+    id: 9,
+    path: "images/origamipeacock.jpg",
+    description: "I enjoy making origami models. Tiny golden peacock!",
+  },
+
+  {
+    id: 10,
+    path: "images/friendsatpark.jpg",
+    description: "I am lucky enough to have friends I can call chosen family.",
+  },
 ];
 
 module.exports = galleryItems;
