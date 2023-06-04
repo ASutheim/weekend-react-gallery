@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./GalleryItem.css";
 import axios from "axios";
+import Grid from "@mui/material/Grid";
 
 function GalleryItem({ item, getGalleryArray }) {
   //increases like count by one each time the button is clicked
@@ -26,7 +27,7 @@ function GalleryItem({ item, getGalleryArray }) {
   };
 
   return (
-    <div class="gallery-item">
+    <Grid item xs={3}>
       {/* calls handleToggle function to display either the image or the description 
         on a click anywhere within the div field */}
       {displayImage ? (
@@ -50,7 +51,7 @@ function GalleryItem({ item, getGalleryArray }) {
       <div class="likes-field">
         <p>{item.likes} people ❤️ this photo</p>
       </div>
-    </div>
+    </Grid>
   );
 }
 

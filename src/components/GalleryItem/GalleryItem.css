@@ -1,16 +1,23 @@
 .gallery-item {
   margin: 5px;
   border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .image {
-  width: 100%;
+  width: 180px;
   height: auto;
 }
 
 .description {
   padding: 15px;
   text-align: center;
+}
+
+.like-button {
+  background-color: whitesmoke;
+}
+
+.description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

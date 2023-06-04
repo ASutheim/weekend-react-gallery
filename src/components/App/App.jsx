@@ -33,10 +33,11 @@ function App() {
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       {/* Passes the array of data from the get request to the GalleryList component via props*/}
+      <div class="gallery-items">
       <GalleryList
         galleryArray={galleryArray}
         getGalleryArray={getGalleryArray}
-      />
+      /></div>
     </div>
   );
 }

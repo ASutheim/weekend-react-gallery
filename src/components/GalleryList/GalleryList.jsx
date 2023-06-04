@@ -1,4 +1,5 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
+import Grid from "@mui/material/Grid";
 
 //Passes the array of data via props from the parent app.jsx file
 function GalleryList({ galleryArray, getGalleryArray }) {
@@ -7,7 +8,7 @@ function GalleryList({ galleryArray, getGalleryArray }) {
   return (
     //loops through the array of data and passes each object within it
     //to the child component GalleryItem
-    <div>
+    <Grid container spacing={12} rowSpacing={2} columnSpacing={1}>
       {galleryArray.map((item) => (
         <GalleryItem
           item={item}
@@ -15,7 +16,7 @@ function GalleryList({ galleryArray, getGalleryArray }) {
           getGalleryArray={getGalleryArray}
         />
       ))}
-    </div>
+    </Grid>
   );
 }
 
