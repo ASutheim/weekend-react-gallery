@@ -1,12 +1,8 @@
-.gallery-item {
-  margin: 5px;
-  border: 1px solid #ccc;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .image {
   width: 180px;
   height: auto;
+  padding: 10px;
+  border: solid 1px whitesmoke;
 }
 
 .description {
@@ -15,9 +11,16 @@
 }
 
 .like-button {
+  margin: 5px;
   background-color: whitesmoke;
 }
 
 .description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: whitesmoke;
+}
+
+.likes-field {
+  color: whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
