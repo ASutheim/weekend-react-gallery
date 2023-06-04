@@ -26,15 +26,17 @@ function App() {
     getGalleryArray();
   }, []);
 
-
-  //Appends all the things to the DOM 
+  //Appends all the things to the DOM
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
       {/* Passes the array of data from the get request to the GalleryList component via props*/}
-      <GalleryList galleryArray={galleryArray} />
+      <GalleryList
+        galleryArray={galleryArray}
+        getGalleryArray={getGalleryArray}
+      />
     </div>
   );
 }

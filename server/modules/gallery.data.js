@@ -10,29 +10,39 @@ const galleryItems = [
     id: 2,
     path: "images/homebackyard.jpg",
     description: "Where I grew up, in northeast Los Angeles.",
+    likes: 0,
   },
-  { id: 3, path: "images/maryandkids.jpg", description: "My partner and her kids" },
+  {
+    id: 3,
+    path: "images/maryandkids.jpg",
+    description: "My partner and her kids",
+    likes: 0,
+  },
   {
     id: 4,
     path: "images/maryandmecamping.jpg",
     description: "My partner and me on a camping trip last fall",
+    likes: 0,
   },
   {
     id: 5,
     path: "images/jermsandcat.jpg",
     description: "My brother snuggling my cat. I love them both a lot.",
+    likes: 0,
   },
   {
     id: 6,
     path: "images/dobostorte.jpg",
     description:
       "A Hungarian cake (dobos torte) I made for my dad. I love baking for loved ones.",
+    likes: 0,
   },
   {
     id: 7,
     path: "images/solveigportrait.jpg",
     description:
       "A small kid I love drew this picture of me in chalk. I think it is a very accurate portrait.",
+    likes: 0,
   },
   // { id: 8, path: 'images/', description: ''},
 ];

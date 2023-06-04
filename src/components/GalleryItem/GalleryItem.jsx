@@ -1,13 +1,20 @@
 import { useState } from "react";
 import "./GalleryItem.css";
+import axios from "axios";
 
-function GalleryItem({ item }) {
-  //adds hook to a numerical variable counting number of times like button is clicked
-  let [likesCount, setLikesCount] = useState(0);
-
+function GalleryItem({ item, getGalleryArray }) {
   //increases like count by one each time the button is clicked
   const handleLike = () => {
-    setLikesCount(likesCount + 1);
+    console.log("Inside handleLike function");
+    axios
+      .put(`/gallery/like/${item.id}`)
+      .then((response) => {
+        console.log("response:", response);
+        getGalleryArray();
+      })
+      .catch(function (error) {
+        console.log("Error in updating likesCount", error);
+      });
   };
 
   //adds hook to a Boolean variable displayImage with a default value of true
@@ -19,7 +26,7 @@ function GalleryItem({ item }) {
   };
 
   return (
-    <div class="gallery-item" key={item.id}>
+    <div class="gallery-item">
       {/* calls handleToggle function to display either the image or the description 
         on a click anywhere within the div field */}
       {displayImage ? (
@@ -41,7 +48,7 @@ function GalleryItem({ item }) {
 
       {/* displays like count */}
       <div class="likes-field">
-        <p>{likesCount} people ❤️ this photo</p>
+        <p>{item.likes} people ❤️ this photo</p>
       </div>
     </div>
   );
